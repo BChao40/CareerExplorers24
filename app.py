@@ -13,7 +13,7 @@ def quiz(level):
 
 @app.route('/api/stock_data')
 def stock_data():
-    response = requests.get("URL_TO_STOCK_API")
+    response = requests.get("") # url goes here
     data = response.json()
     return jsonify(data)
 
