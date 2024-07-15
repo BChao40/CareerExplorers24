@@ -1,13 +1,11 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home Page</title>
-</head>
-<body>
-    <h1>The Finance Simulator</h1>
-    <p>Take your first step to financial success!</p>
-    <a href="/quiz/level1">Start Learning</a>
-</body>
-</html>
+{% extends 'navbar.html' %}
+
+{% block title %}
+Home Page
+{% endblock %}
+
+{% block content %}
+<h1>The Finance Simulator</h1>
+<p>Take your first step to financial success!</p>
+<a href="/quiz/level1">Start Learning</a>
+{% endblock %}
