@@ -1,11 +1,13 @@
-{% extends 'navbar.html' %}
+{% extends 'base.html' %}
 
 {% block title %}
 Home Page
 {% endblock %}
 
 {% block content %}
-<h1>The Finance Simulator</h1>
-<p>Take your first step to financial success!</p>
-<a href="/quiz/level1">Start Learning</a>
+<div class="background"></div>
+<div class="content-container">
+    <h1>The Finance Teacher</h1>
+    <a href="/quiz/1" class="start-btn">Start Learning</a>
+</div>
 {% endblock %}

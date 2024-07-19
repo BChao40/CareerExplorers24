@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Quiz Result - Level {{ level }}
+{% endblock %}
+
+{% block content %}
+<div class="result-container">
+    <h1>Result for Level {{ level }}</h1>
+    <p>You chose: $ {{ chosen_value }}</p>
+    <p>The correct answer was: $ {{ correct_answer }}</p>
+</div>
+{% endblock %}
