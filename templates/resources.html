@@ -1,16 +1,23 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Resources</title>
-</head>
-<body>
-    <h1>Stock Data Lookup</h1>
-    <form action="/stock_info" method="post">
-        <label for="ticker">Enter Stock Ticker:</label>
+{% extends 'base.html' %}
+
+{% block title %}
+Resources
+{% endblock %}
+
+{% block content %}
+<div class="resources-container">
+    <h1>Resources</h1>
+    <h2>Stock Data Breakdown</h2>
+    <form id="tickerForm" onsubmit="return setURL(this)">
+        <label for="ticker">Enter Stock Ticker to View Data:</label>
         <input type="text" id="ticker" name="ticker" required>
         <button type="submit">Go</button>
     </form>
-</body>
-</html>
+</div>
+<script>
+    function setURL(form){
+        var ticker = document.getElementById('ticker').value;
+        form.action = '/stock_data/' + ticker;
+    }
+</script>
+{% endblock %}

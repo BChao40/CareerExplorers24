@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Stock Chart for {{ ticker }}
+{% endblock %}
+
+{% block content %}
+<div class="stock-data">
+    <h1>Stock Data for {{ ticker }}</h1>
+    <p>Open: ${{ stock['o'] }}</p>
+    <p>High: ${{ stock['h'] }}</p>
+    <p>Low: ${{ stock['l'] }}</p>
+    <p>Close: ${{ stock['c'] }}</p>
+    <p>Volume: {{ stock['v'] }}</p>
+</div>
+{% endblock %}

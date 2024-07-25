@@ -9,13 +9,13 @@ Quiz - Level {{ level }}
     <h1>Level {{ level }}: Beginner</h1>
     <p>{{ question }}</p>
     <form action="{{ url_for('quiz_result', level=level) }}" method="post">
-        <input type="radio" id="choice1" name="stock_choice" value="{{ stock_price * 1.05 }}">
+        <input type="radio" id="choice1" name="quiz_choice" value="{{ stock_price * 1.05 }}">
         <label for="choice1">$ {{ "%.2f"|format(stock_price * 1.05) }}</label><br>
 
-        <input type="radio" id="choice2" name="stock_choice" value="{{ stock_price * 0.95 }}">
+        <input type="radio" id="choice2" name="quiz_choice" value="{{ stock_price * 0.95 }}">
         <label for="choice2">$ {{ "%.2f"|format(stock_price * 0.95) }}</label><br>
 
-        <input type="radio" id="choice3" name="stock_choice" value="{{ stock_price }}">
+        <input type="radio" id="choice3" name="quiz_choice" value="{{ stock_price }}">
         <label for="choice3">$ {{ "%.2f"|format(stock_price) }}</label><br>
 
         <button type="submit">Submit</button>
