@@ -1,24 +1,26 @@
 {% extends 'base.html' %}
 
 {% block title %}
-Quiz - Level {{ level }}
+Interactive Learning - Level {{ level }}
 {% endblock %}
 
 {% block content %}
 <div class="quiz-container">
-    <h1>Level {{ level }}: Beginner</h1>
-    <p>{{ question }}</p>
+    <h1>Level {{ level }}</h1>
+    <h3>{{ question }}</h3>
+    {% if question_type in ['stock_price', 'multiple_choice', 'true_false'] %}
     <form action="{{ url_for('quiz_result', level=level) }}" method="post">
-        <input type="radio" id="choice1" name="quiz_choice" value="{{ stock_price * 1.05 }}">
-        <label for="choice1">$ {{ "%.2f"|format(stock_price * 1.05) }}</label><br>
-
-        <input type="radio" id="choice2" name="quiz_choice" value="{{ stock_price * 0.95 }}">
-        <label for="choice2">$ {{ "%.2f"|format(stock_price * 0.95) }}</label><br>
-
-        <input type="radio" id="choice3" name="quiz_choice" value="{{ stock_price }}">
-        <label for="choice3">$ {{ "%.2f"|format(stock_price) }}</label><br>
-
-        <button type="submit">Submit</button>
+        {% for answer in answers %}
+        <input type="radio" id="choice{{ loop.index }}" name="quiz_choice" value="{{ answer.text }}">
+        <label for="choice{{ loop.index }}">{{ answer.text }}</label><br>
+        {% endfor %}
+        <button type="submit" class="quiz-btn">Submit</button>
     </form>
+    {% elif question_type == 'text' %}
+    <form action="{{ url_for('quiz_result', level=level) }}" method="post">
+        <textarea name="quiz_answer" rows="4" cols="50"></textarea><br>
+        <button type="submit" class="quiz-btn">Submit</button>
+    </form>
+    {% endif %}
 </div>
 {% endblock %}

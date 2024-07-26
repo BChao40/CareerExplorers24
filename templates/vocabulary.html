@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Vocabulary
+{% endblock %}
+
+{% block content %}
+<div class="vocabulary-container">
+    <h1>Vocabulary</h1>
+    <ul>
+        {% for item in vocabulary %}
+        <li>
+            <strong>{{ item.term }}</strong>: {{ item.definition }}
+        </li>
+        {% endfor %}
+    </ul>
+</div>
+{% endblock %}
