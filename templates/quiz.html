@@ -8,6 +8,9 @@ Interactive Learning - Level {{ level }}
 <div class="quiz-container">
     <h1>Level {{ level }}</h1>
     <h3>{{ question }}</h3>
+    {% if error_message %}
+    <p style="color: red;">{{ error_message }}</p>
+    {% endif %}
     {% if question_type in ['stock_price', 'multiple_choice', 'true_false'] %}
     <form action="{{ url_for('quiz_result', level=level) }}" method="post">
         {% for answer in answers %}

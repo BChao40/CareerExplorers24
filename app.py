@@ -62,9 +62,19 @@ def quiz_result(level):
     if not question:
         return "No question found for this level", 404
     
+    print(f"Received POST data: " + str({request.form}))
+
+    if str(request.form) == "ImmutableMultiDict([])":
+        error_message = "Please select an answer."
+        return render_template('quiz.html', level=level, question=question["question"], answers=question["answers"], question_type=question["type"], error_message=error_message)
+    
     if question["type"] in ["stock_price", "multiple_choice", "true_false"]:
         chosen_value = request.form['quiz_choice']
-        correct = next((answer for answer in question["answers"] if answer["text"] == chosen_value), {}).get("correct", False)
+        if question["type"] == "stock_price":
+            price = get_stock_data(question["ticker"])['results'][0]['c']
+            correct = next((answer for answer in question["answers"] if answer["text"].replace("{price}", str(price)) == chosen_value), {}).get("correct", False)
+        else:
+            correct = next((answer for answer in question["answers"] if answer["text"] == chosen_value), {}).get("correct", False)
         explanation = question["explanation"]
         feedback = "Correct! " + explanation if correct else "Incorrect. " + explanation
     elif question["type"] == "text":
