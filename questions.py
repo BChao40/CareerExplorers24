@@ -26,7 +26,7 @@ questions = [
         "question": "Which method is often used to pay off multiple debts efficiently?",
         "explanation": "The Debt Avalanche Method prioritizes paying off debts with the highest interest rates first, which can save money on interest over time.",
         "answers": [
-            {"text": "Debt Avalanche Method", "correct": True},
+            {"text": "Debt Avalanche", "correct": True},
             {"text": "Increasing credit limits", "correct": False},
             {"text": "Ignoring minimum payments", "correct": False},
             {"text": "Randomly paying off debts", "correct": False}

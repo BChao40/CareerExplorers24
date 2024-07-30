@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Level Select
+{% endblock %}
+
+{% block content %}
+<div class="level-select-container">
+    <h1>Select a Level</h1>
+    <ul>
+        {% for question in questions %}
+        <li>
+            <a href="{{ url_for('quiz', level=question.level) }}" class="level-btn">Level {{ question.level }}: {{ question.topic }}</a>
+        </li>
+        {% endfor %}
+    </ul>
+</div>
+{% endblock %}
