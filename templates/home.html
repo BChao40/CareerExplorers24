@@ -6,8 +6,25 @@ Home Page
 
 {% block content %}
 <div class="background"></div>
-<div class="content-container">
+<div class="content-container no-scroll">
     <h1>The Finance Teacher</h1>
     <a href="/quiz/1" class="start-btn">Start Learning</a>
+</div>
+
+<div class="news-container">
+    <h1>Latest Finance and Business News</h1>
+    <div class="news-grid">
+        {% for article in news_articles %}
+        <div class="news-article">
+            {% if article.urlToImage %}
+            <img src="{{ article.urlToImage }}" alt="News Image" class="news-image">
+            {% endif %}
+            <div class="news-content">
+                <a href="{{ article.url }}" target="_blank" class="news-title">{{ article.title|truncate(50) }}</a>
+                <p class="news-description">{{ article.description|truncate(100) }}</p>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
 </div>
 {% endblock %}

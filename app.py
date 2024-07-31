@@ -19,9 +19,32 @@ def get_stock_data(ticker):
     else:
         return {"error": "api_error"}
 
+def get_news():
+    url = (
+        "https://newsapi.org/v2/everything?"
+        "q=investment OR stock OR stock market OR finance OR financial OR investing OR economy&"
+        "language=en&"
+        "pageSize=10&"
+        "apiKey=085bd521ce344488b12e4c1dbe6bf4df"
+    )
+    response = requests.get(url)
+    if response.status_code != 200:
+        print("Failed to fetch news articles:", response.status_code)
+        return []
+
+    articles = response.json().get('articles', [])
+
+    for article in articles:
+        print(f"Title: {article.get('title')}")
+        print(f"Source: {article.get('source', {}).get('name')}")
+        print(f"URL: {article.get('url')}")
+
+    return articles[:6]
+
 @app.route('/')
 def home():
-    return render_template('home.html')
+    news_articles = get_news()
+    return render_template('home.html', news_articles=news_articles)
 
 @app.route('/resources', methods=['GET', 'POST'])
 def resources():
