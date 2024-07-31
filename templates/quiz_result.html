@@ -9,7 +9,6 @@ Quiz Result - Level {{ level }}
     <h1>Result for Level {{ level }}</h1>
     <p>{{ feedback }}</p>
     <div class="button-container">
-        <a href="{{ url_for('quiz', level=level - 1) }}" class="quiz-btn">Previous Question</a>
         <a href="{{ url_for('quiz', level=level) }}" class="quiz-btn">Retry</a>
         <a href="{{ url_for('quiz', level=level + 1) }}" class="quiz-btn">Next Question</a>
     </div>

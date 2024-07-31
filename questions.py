@@ -8,7 +8,8 @@ questions = [
             {"text": "To track income and expenses", "correct": True},
             {"text": "To increase spending", "correct": False},
             {"text": "To ignore financial goals", "correct": False}
-        ]
+        ],
+        "topic": "Budgeting"
     },
     {
         "level": 2,
@@ -18,7 +19,8 @@ questions = [
         "answers": [
             {"text": "True", "correct": True},
             {"text": "False", "correct": False}
-        ]
+        ],
+        "topic": "Credit Score"
     },
     {
         "level": 3,
@@ -30,14 +32,16 @@ questions = [
             {"text": "Increasing credit limits", "correct": False},
             {"text": "Ignoring minimum payments", "correct": False},
             {"text": "Randomly paying off debts", "correct": False}
-        ]
+        ],
+        "topic": "Debt Management"
     },
     {
         "level": 4,
         "type": "text",
         "question": "Name one effective strategy for increasing personal savings.",
         "explanation": "Automating savings ensures that you consistently save a portion of your income, making it easier to build a savings habit.",
-        "answers": []
+        "answers": [],
+        "topic": "Savings"
     },
     {
         "level": 5,
@@ -47,7 +51,8 @@ questions = [
         "answers": [
             {"text": "True", "correct": True},
             {"text": "False", "correct": False}
-        ]
+        ],
+        "topic": "Retirement"
     },
     {
         "level": 6,
@@ -59,14 +64,16 @@ questions = [
             {"text": "1-3 months of expenses", "correct": False},
             {"text": "3-6 months of expenses", "correct": True},
             {"text": "1 year of expenses", "correct": False}
-        ]
+        ],
+        "topic": "Emergency Fund"
     },
     {
         "level": 7,
         "type": "text",
         "question": "Name one type of tax that individuals commonly pay.",
         "explanation": "Income tax is a tax levied by the government on individuals' earnings from various sources, such as wages, salaries, and investments.",
-        "answers": []
+        "answers": [],
+        "topic": "Taxes"
     },
     {
         "level": 8,
@@ -76,7 +83,8 @@ questions = [
         "answers": [
             {"text": "True", "correct": True},
             {"text": "False", "correct": False}
-        ]
+        ],
+        "topic": "Health Insurance"
     },
     {
         "level": 9,
@@ -88,7 +96,8 @@ questions = [
             {"text": "Save $5,000 for a vacation in 18 months", "correct": True},
             {"text": "Get rich quickly", "correct": False},
             {"text": "Buy everything on sale", "correct": False}
-        ]
+        ],
+        "topic": "Financial Goals"
     },
     {
         "level": 10,
@@ -99,7 +108,8 @@ questions = [
             {"text": "Recent transactions", "correct": True},
             {"text": "Future stock prices", "correct": False},
             {"text": "Personal opinions", "correct": False}
-        ]
+        ],
+        "topic": "Bank Statements"
     },
     {
         "level": 11,
@@ -109,7 +119,8 @@ questions = [
         "answers": [
             {"text": "True", "correct": True},
             {"text": "False", "correct": False}
-        ]
+        ],
+        "topic": "Stocks"
     },
     {
         "level": 12,
@@ -120,14 +131,16 @@ questions = [
             {"text": "Ownership in a company", "correct": False},
             {"text": "A loan made to a corporation or government", "correct": True},
             {"text": "A type of mutual fund", "correct": False}
-        ]
+        ],
+        "topic": "Bonds"
     },
     {
         "level": 13,
         "type": "text",
         "question": "Name one advantage of investing in mutual funds.",
         "explanation": "Mutual funds pool money from many investors to buy a diversified portfolio of securities, reducing the risk associated with individual investments.",
-        "answers": []
+        "answers": [],
+        "topic": "Mutual Funds"
     },
     {
         "level": 14,
@@ -137,7 +150,8 @@ questions = [
         "answers": [
             {"text": "True", "correct": True},
             {"text": "False", "correct": False}
-        ]
+        ],
+        "topic": "ETFs"
     },
     {
         "level": 15,
@@ -149,7 +163,8 @@ questions = [
             {"text": "Real Estate Investment Trusts (REITs)", "correct": True},
             {"text": "House flipping", "correct": False},
             {"text": "Property management", "correct": False}
-        ]
+        ],
+        "topic": "Real Estate Investments"
     },
     {
         "level": 16,
@@ -161,7 +176,8 @@ questions = [
             {"text": "Secure and transparent record-keeping", "correct": True},
             {"text": "Physical storage of digital coins", "correct": False},
             {"text": "Printing physical currency", "correct": False}
-        ]
+        ],
+        "topic": "Blockchain"
     },
     {
         "level": 17,
@@ -171,7 +187,8 @@ questions = [
         "answers": [
             {"text": "True", "correct": True},
             {"text": "False", "correct": False}
-        ]
+        ],
+        "topic": "Commodities"
     },
     {
         "level": 18,
@@ -182,7 +199,8 @@ questions = [
             {"text": "A guarantee to buy a stock", "correct": False},
             {"text": "A contract giving the right to buy or sell an asset at a set price", "correct": True},
             {"text": "A type of bank account", "correct": False}
-        ]
+        ],
+        "topic": "Options Trading"
     },
     {
         "level": 19,
@@ -192,7 +210,8 @@ questions = [
         "answers": [
             {"text": "True", "correct": True},
             {"text": "False", "correct": False}
-        ]
+        ],
+        "topic": "Futures Contracts"
     },
     {
         "level": 20,
@@ -203,7 +222,8 @@ questions = [
             {"text": "To minimize investment risk", "correct": False},
             {"text": "To provide high returns for their investors", "correct": True},
             {"text": "To support charitable causes", "correct": False}
-        ]
+        ],
+        "topic": "Hedge Funds"
     },
     {
         "level": 21,
@@ -215,7 +235,8 @@ questions = [
             {"text": "Publicly traded companies", "correct": False},
             {"text": "Private companies not listed on stock exchanges", "correct": True},
             {"text": "Government bonds", "correct": False}
-        ]
+        ],
+        "topic": "Private Equity"
     },
     {
         "level": 22,
@@ -226,14 +247,16 @@ questions = [
             {"text": "Established large corporations", "correct": False},
             {"text": "Early-stage startups", "correct": True},
             {"text": "Government bonds", "correct": False}
-        ]
+        ],
+        "topic": "Venture Capital"
     },
     {
         "level": 23,
         "type": "text",
         "question": "Name one benefit of investing in index funds.",
         "explanation": "Index funds typically have lower management fees because they passively track a market index, reducing the costs associated with active management.",
-        "answers": []
+        "answers": [],
+        "topic": "Index Funds"
     },
     {
         "level": 24,
@@ -245,14 +268,16 @@ questions = [
             {"text": "Seeking companies that pay regular dividends", "correct": True},
             {"text": "Prioritizing high-risk stocks", "correct": False},
             {"text": "Avoiding dividend-paying stocks", "correct": False}
-        ]
+        ],
+        "topic": "Dividend Investing"
     },
     {
         "level": 25,
         "type": "text",
         "question": "What is one benefit of contributing to a 401(k) or IRA?",
         "explanation": "Retirement accounts like 401(k)s and IRAs offer tax benefits, including tax-deferred growth, which can help increase the amount saved for retirement.",
-        "answers": []
+        "answers": [],
+        "topic": "Retirement Accounts"
     },
     {
         "level": 26,
@@ -262,7 +287,8 @@ questions = [
         "answers": [
             {"text": "True", "correct": True},
             {"text": "False", "correct": False}
-        ]
+        ],
+        "topic": "Diversification"
     },
     {
         "level": 27,
@@ -271,7 +297,8 @@ questions = [
         "explanation": "Diversifying a portfolio involves investing in a variety of asset classes to mitigate risk, ensuring that the impact of any single investment's poor performance is minimized.",
         "answers": [
             {"text": "It helps spread risk across different assets.", "correct": True}
-        ]
+        ],
+        "topic": "Portfolio Diversification"
     },
     {
         "level": 28,
@@ -281,14 +308,16 @@ questions = [
         "answers": [
             {"text": "True", "correct": True},
             {"text": "False", "correct": False}
-        ]
+        ],
+        "topic": "Technical Analysis"
     },
     {
         "level": 29,
         "type": "text",
         "question": "Name one factor considered in fundamental analysis.",
         "explanation": "Fundamental analysis examines various financial and economic factors, such as a company's earnings, to assess its intrinsic value and potential for future growth.",
-        "answers": []
+        "answers": [],
+        "topic": "Fundamental Analysis"
     },
     {
         "level": 30,
@@ -299,6 +328,16 @@ questions = [
             {"text": "Investing in the most profitable companies regardless of their practices", "correct": False},
             {"text": "Investing in companies that adhere to ethical and sustainable practices", "correct": True},
             {"text": "Avoiding all types of investments", "correct": False}
-        ]
+        ],
+        "topic": "Socially Responsible Investing"
+    },
+    {
+        "level": 31,
+        "type": "multiple_choice",
+        "question": "Congratulations! You've completed the quiz. Make sure to check the vocabulary page to study the topics covered in this quiz.",
+        "explanation": "",
+        "answers": [
+        ],
+        "topic": "Completion"
     }
 ]
